@@ -8,7 +8,7 @@ function menuleft(){
     $pgmenuTop      = new HTML_TreeNode($nodeProperties);
     $pgmenu         = new HTML_TreeMenu();
     $pgmenu->addItem($pgmenuTop);
-    $nx = &$pgmenuTop->addItem(new HTML_TreeNode(array("text"=>_("demo"), "link"=>'/?content=demo')));
+    $nx = &$pgmenuTop->addItem(new HTML_TreeNode(array("text"=>_("demo"), "link"=>'/?content=todo')));
       $nx->addItem(new HTML_TreeNode(array("text"=>_("jobAdmin"), "link"=>'/jobs')));
       $nx->addItem(new HTML_TreeNode(array("text"=>_("jobSearch"), "link"=>'/jobSearch')));
 
