@@ -2,7 +2,7 @@
 /**
  * @package    OpenHR
  * @subpackage jobSearch
- * @version    $Revision: 1.9 $
+ * @version    $Revision: 1.10 $
  * @author     Carsten Bleek <carsten@bleek.de>
  */
 
@@ -15,13 +15,11 @@ $page=&Page::singleton("search");
 
 if (!isset($_GET["content"])) $_GET["content"]="project";
 
-Page::fetchSlots("search");
-Page::setSlot('menuleft',    menuleft());
-Page::setSlot('menutop',     menutop());
-Page::setSlot('menufoot',    sprintf(_("Copyright (c) 2003 %s"),"<a href=\"?content=carsten\">Carsten Bleek</a>"));
-
-
-$template_dir="jobSearch/";
+$page=&Page::singleton("jobSearch/generic.tpl");
+$page->fetchSlots("search");
+$page->setSlot('menuleft',    menuleft());
+$page->setSlot('menutop',     menutop());
+$page->setSlot('menufoot',    sprintf(_("Copyright (c) 2003 %s"),"<a href=\"?content=carsten\">Carsten Bleek</a>"));
 
 $form = new Form('jobSearch','GET');
 
@@ -30,9 +28,7 @@ $form->setDefaults($defaultValues);
 $form->addElement('text', 'fulltext', _("Fulltext"));
 $form->addElement('submit', 'search', _("search"));
 
-$element=&Page::addElement("text");
-$element->setSlot("content",$form->toHtml());
-$element->setPosition(0,0);
+$page->setSlot("content",$form->toHtml());
 
 $list = new ListObject("search",array("currentPage"=>1,
                                       "perPage"    =>5));
@@ -43,12 +39,10 @@ $list->addColumn("job_title",     array( "named" =>_("title"),
                                          "linked"=>"job.php"));
 $list->addColumn("job_location",  array( "named" =>_("location")));
 
-$element    = &Page::addElement("text");
-$element->setSlot("content",$list->toHtml());
-$element->setPosition(1,0);
+$page->setSlot("content",$list->toHtml());
 
-$smarty->assign("page",Page::getSlots());
-$smarty->display($template_dir.'generic.tpl');
+$page->toHtml();
+
 
 
 ?>
