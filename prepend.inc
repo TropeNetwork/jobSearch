@@ -6,6 +6,13 @@ error_reporting( E_ALL );
  */
 define("FILE_INI", "/home/carsten/config/jobAdmin.conf");
 
+/**
+ * global array containing all configuration settings
+ *
+ * @var array $OHR_CONFIG
+ */
+$OHR_CONFIG=parse_ini_file(FILE_INI);
+
 define('DS'            ,  DIRECTORY_SEPARATOR);
 define('OPENHR_BASE'   ,  dirname(__FILE__).DS.'..'.DS.'jobs');
 define('PEAR_BASE'     ,  dirname(__FILE__).DS.'..'.DS.'pear');
