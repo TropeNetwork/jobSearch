@@ -29,7 +29,7 @@ $element->setSlot("content",$form->toHtml());
 $element->setPosition(0,0);
 
 $list = new ListObject("search",array("currentPage"=>1,
-                                      "perPage"    =>2));
+                                      "perPage"    =>5));
 
 $list->addColumn("job_id",        array( "named" =>_("Job No.")));
 $list->addColumn("incoming_date", array( "named" =>_("date")));
