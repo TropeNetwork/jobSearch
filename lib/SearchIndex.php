@@ -28,7 +28,7 @@ class SearchIndex {
 
         $query="REPLACE 
                    INTO jobs 
-                        (job_id, job_title, location, employer, incoming_date)
+                        (job_id, job_title, job_location, employer, incoming_date)
                  VALUES (?,?,?,?,now())";     
         $sth=$this->db->prepare($query);
 

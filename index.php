@@ -2,6 +2,7 @@
 
 include_once "prepend.inc";
 require_once OPENHR_LIB."/Form.php";
+require_once OPENHR_LIB."/ListObject.php";
 
 $page=&Page::singleton("search");
 
@@ -22,8 +23,15 @@ $form->setDefaults($defaultValues);
 $form->addElement('text', 'fulltext', _("Fulltext"));
 $form->addElement('submit', 'search', _("search"));
 
-$content=&Page::addElement("text");
-$content->setSlot("content",$form->toHtml());
+$element=&Page::addElement("text");
+$element->setSlot("content",$form->toHtml());
+$element->setPosition(0,0);
+
+$list = new ListObject("search",array("currentPage"=>1,
+                                      "perPage"    =>2));
+$element    = &Page::addElement("text");
+$element->setSlot("content",$list->toHtml());
+$element->setPosition(1,0);
 
 $smarty->assign("page",Page::getSlots());
 $smarty->display($template_dir.'generic.tpl');
