@@ -1,6 +1,7 @@
 <?php
 
 include_once "prepend.inc";
+include_once "menu.inc";
 require_once OPENHR_LIB."/Form.php";
 require_once OPENHR_LIB."/ListObject.php";
 
@@ -9,7 +10,7 @@ $page=&Page::singleton("search");
 if (!isset($_GET["content"])) $_GET["content"]="project";
 
 Page::fetchSlots("search");
-Page::setSlot('menuleft',    "");
+Page::setSlot('menuleft',    menuleft());
 Page::setSlot('menutop',     "");
 Page::setSlot('menufoot',    sprintf(_("Copyright (c) 2003 %s"),"<a href=\"?content=carsten\">Carsten Bleek</a>"));
 
