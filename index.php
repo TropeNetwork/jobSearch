@@ -2,7 +2,7 @@
 /**
  * @package    OpenHR
  * @subpackage jobSearch
- * @version    $Revision: 1.8 $
+ * @version    $Revision: 1.9 $
  * @author     Carsten Bleek <carsten@bleek.de>
  */
 
@@ -17,7 +17,7 @@ if (!isset($_GET["content"])) $_GET["content"]="project";
 
 Page::fetchSlots("search");
 Page::setSlot('menuleft',    menuleft());
-Page::setSlot('menutop',     "");
+Page::setSlot('menutop',     menutop());
 Page::setSlot('menufoot',    sprintf(_("Copyright (c) 2003 %s"),"<a href=\"?content=carsten\">Carsten Bleek</a>"));
 
 

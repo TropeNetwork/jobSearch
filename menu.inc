@@ -2,13 +2,13 @@
 /**
  * @package    OpenHR
  * @subpackage jobSearch
- * @version    $Revision: 1.3 $
+ * @version    $Revision: 1.4 $
  * @author     Carsten Bleek <carsten@bleek.de>
  */
 require_once( 'HTML/TreeMenu.php' );
 
 function menuleft(){
-
+    global $OHR_CONFIG;
     $nodeProperties = array("text"=>_("Home"),"link"=> "/", "icon"=>"icons/home.gif");
     $pgmenuTop      = new HTML_TreeNode($nodeProperties);
     $pgmenu         = new HTML_TreeMenu();
