@@ -2,7 +2,7 @@
 /**
  * @package    OpenHR
  * @subpackage jobSearch
- * @version    $Revision: 1.10 $
+ * @version    $Revision: 1.11 $
  * @author     Carsten Bleek <carsten@bleek.de>
  */
 
@@ -15,11 +15,11 @@ $page=&Page::singleton("search");
 
 if (!isset($_GET["content"])) $_GET["content"]="project";
 
-$page=&Page::singleton("jobSearch/generic.tpl");
-$page->fetchSlots("search");
+$page=&Page::singleton("generic.tpl");
+#$page->fetchSlots("search");
 $page->setSlot('menuleft',    menuleft());
 $page->setSlot('menutop',     menutop());
-$page->setSlot('menufoot',    sprintf(_("Copyright (c) 2003 %s"),"<a href=\"?content=carsten\">Carsten Bleek</a>"));
+#$page->setSlot('menufoot',    sprintf(_("Copyright (c) 2003 %s"),"<a href=\"?content=carsten\">Carsten Bleek</a>"));
 
 $form = new Form('jobSearch','GET');
 
