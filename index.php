@@ -2,12 +2,12 @@
 /**
  * @package    OpenHR
  * @subpackage jobSearch
- * @version    $Revision: 1.14 $
+ * @version    $Revision: 1.15 $
  * @author     Carsten Bleek <carsten@bleek.de>
  */
 
 include_once 'prepend.inc';
-include_once '../jobAdmin/menu.inc';
+include_once OPENHR_LIB.'/Menu.php';
 require_once OPENHR_LIB.'/Form.php';
 require_once OPENHR_LIB.'/ListObject.php';
 
