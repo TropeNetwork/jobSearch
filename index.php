@@ -29,6 +29,12 @@ $element->setPosition(0,0);
 
 $list = new ListObject("search",array("currentPage"=>1,
                                       "perPage"    =>2));
+
+$list->addColumn("job_id",        array( "named" =>_("Job No.")));
+$list->addColumn("incoming_date", array( "named" =>_("date")));
+$list->addColumn("job_title",     array( "named" =>_("title")));
+$list->addColumn("job_location",  array( "named" =>_("location")));
+
 $element    = &Page::addElement("text");
 $element->setSlot("content",$list->toHtml());
 $element->setPosition(1,0);
