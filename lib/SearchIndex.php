@@ -15,14 +15,12 @@ class SearchIndex {
         $this->db         = &DB::getConnection( DB_SEARCH );
     }
 
-    function activate(){
-    
+    function insert($key,$data){
+        return "INSERT $key";
     }
     
-    function deactivate(){
-    }
-
-    function delete(){
+    function delete($key){
+        return "DELETE $key";
     }
 
 }
