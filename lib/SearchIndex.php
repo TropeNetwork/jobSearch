@@ -31,7 +31,8 @@ class SearchIndex {
                         (job_id, job_title, location, employer, incoming_date)
                  VALUES (?,?,?,?,now())";     
         $sth=$this->db->prepare($query);
-        $this->db->execute($sth,array($key,$data["job_title"],$data["location"],""));
+
+        $this->db->execute($sth,array($key,$data->job_title->value,$data->job_location->value,""));
 
         return array("key"=>$key,
                      "action"=> JOB_STATUS_ONLINE_REQUESTED,
@@ -40,6 +41,11 @@ class SearchIndex {
     }
     
     function delete($key){
+
+        $query="DELETE FROM jobs where job_id=?";
+        $sth=$this->db->prepare($query);
+        $this->db->execute($sth,array($key));
+
         return array("key"=>$key,
                      "action"=> JOB_STATUS_OFFLINE_REQUESTED,
                      "return"=> array("errno"  => 0,
