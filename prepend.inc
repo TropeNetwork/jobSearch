@@ -29,7 +29,7 @@ define('OPENHR_LOG'    , OPENHR_BASE.DIRECTORY_SEPARATOR.'log'.DIRECTORY_SEPARAT
 
 define("OHR_MODULE_NAME",'jobSearch');
 define("OHR_MODULE_PATH",'/jobSearch');
-define("OHR_MODULE_CSS" ,'/jobSearch/style.css');
+define("OHR_MODULE_CSS" ,'/jobAdmin/css/jobSearch.css');
 
 require_once(OPENHR_LIB.'base.php');
 
