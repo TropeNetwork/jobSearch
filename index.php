@@ -2,7 +2,7 @@
 /**
  * @package    OpenHR
  * @subpackage jobSearch
- * @version    $Revision: 1.13 $
+ * @version    $Revision: 1.14 $
  * @author     Carsten Bleek <carsten@bleek.de>
  */
 
@@ -23,10 +23,11 @@ $form = new Form('jobSearch','GET');
 
 $defaultValues=array();
 $form->setDefaults($defaultValues);
+$form->setElementTemplate('{label}&nbsp;{element}');
 $form->addElement('text', 'fulltext', _("Fulltext"));
 $form->addElement('submit', 'search', _("search"));
 
-$page->setSlot('content',$form->toHtml());
+$html = $form->toHtml();
 
 $list = new ListObject('search',array('currentPage'=>1,
                                       'perPage'    =>5));
@@ -37,7 +38,9 @@ $list->addColumn('job_title',     array( 'named' =>_("title"),
                                          'linked'=>'job.php'));
 $list->addColumn('job_location',  array( 'named' =>_("location")));
 
-$page->setSlot('content',$list->toHtml());
+$html.='<br/>'.$list->toHtml();
+
+$page->setSlot('content',$html);
 
 $page->toHtml();
 
