@@ -1,4 +1,10 @@
 <?php
+/**
+ * @package    OpenHR
+ * @subpackage jobSearch
+ * @version    $Revision: 1.5 $
+ * @author     Carsten Bleek <carsten@bleek.de>
+ */
 
 include_once("prepend.inc");
 require_once('SOAP/Server.php');

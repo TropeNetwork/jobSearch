@@ -1,4 +1,10 @@
 <?php
+/**
+ * @package    OpenHR
+ * @subpackage jobSearch
+ * @version    $Revision: 1.2 $
+ * @author     Carsten Bleek <carsten@bleek.de>
+ */
 
 require_once("prepend.inc");
 

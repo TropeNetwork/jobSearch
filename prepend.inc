@@ -4,7 +4,7 @@ error_reporting( E_ALL );
 /**
  * @const FILE_INI configuration file
  */
-define("FILE_INI", "/home/carsten/config/jobAdmin.conf");
+define("FILE_INI", "/home/carsten/config/OpenHR.conf");
 
 /**
  * global array containing all configuration settings
@@ -14,18 +14,18 @@ define("FILE_INI", "/home/carsten/config/jobAdmin.conf");
 $OHR_CONFIG=parse_ini_file(FILE_INI);
 
 define('DS'            ,  DIRECTORY_SEPARATOR);
-define('OPENHR_BASE'   ,  dirname(__FILE__).DS.'..'.DS.'jobs');
-define('PEAR_BASE'     ,  dirname(__FILE__).DS.'..'.DS.'pear');
+define('OPENHR_BASE'   ,  $OHR_CONFIG["dir.base_openhr"]);
+define('PEAR_BASE'     ,  $OHR_CONFIG["dir.base_pear"]);
 
 /**
  *@const OPENHR_LIB  defines the location of the OpenHR classes
  */
-define('OPENHR_LIB'    ,  OPENHR_BASE.DS.'lib'.DS);
+define('OPENHR_LIB'    , OPENHR_BASE.DIRECTORY_SEPARATOR.'lib'.DIRECTORY_SEPARATOR);
 
 /**
  *@const OPENHR_LOG  defines the location of Logfiles
  */
-define('OPENHR_LOG'    ,  OPENHR_BASE.DS.'log'.DS);
+define('OPENHR_LOG'    , OPENHR_BASE.DIRECTORY_SEPARATOR.'log'.DIRECTORY_SEPARATOR);
 
 require_once(OPENHR_LIB.'base.php');
 

@@ -1,9 +1,16 @@
 <?php
 
 /**
- * @package jobSearch
- * very simple search Server based on MySQL
- **/
+ * very simple search Server based on MySQL fulltext search
+ * This class implemets adding and removing documents to/from
+ * the search engine
+ * 
+ * @package    OpenHR
+ * @subpackage ProjectPage
+ * @version    $Revision: 1.7 $
+ * @author     Carsten Bleek <carsten@bleek.de>
+ */
+
 
 /**
  * definitions from Job.class. This should propably move

@@ -1,5 +1,10 @@
 <?php
-
+/**
+ * @package    OpenHR
+ * @subpackage jobSearch
+ * @version    $Revision: 1.3 $
+ * @author     Carsten Bleek <carsten@bleek.de>
+ */
 require_once( 'HTML/TreeMenu.php' );
 
 function menuleft(){
@@ -9,11 +14,11 @@ function menuleft(){
     $pgmenu         = new HTML_TreeMenu();
     $pgmenu->addItem($pgmenuTop);
     $nx = &$pgmenuTop->addItem(new HTML_TreeNode(array("text"=>_("demo"), "link"=>'/?content=todo')));
-      $nx->addItem(new HTML_TreeNode(array("text"=>_("jobAdmin"), "link"=>'/jobs')));
-      $nx->addItem(new HTML_TreeNode(array("text"=>_("jobSearch"), "link"=>'/jobSearch')));
+      $nx->addItem(new HTML_TreeNode(array("text"=>_("jobAdmin"), "link"=>$OHR_CONFIG["dir.app_jobAdmin"])));
+      $nx->addItem(new HTML_TreeNode(array("text"=>_("jobSearch"), "link"=>$OHR_CONFIG["dir.app_jobSearch"])));
 
     $pgmenuTree = &new HTML_TreeMenu_DHTML($pgmenu,
-                                      array('images'       => '/jobs/images/TreeMenu',
+                                      array('images'       => $OHR_CONFIG["dir.app_jobAdmin"].'/images/TreeMenu',
                                             'defaultClass' => 'smalltext'));
     return $pgmenuTree->toHtml();
 }

@@ -1,4 +1,10 @@
 <?php
+/**
+ * @package    OpenHR
+ * @subpackage jobSearch
+ * @version    $Revision: 1.8 $
+ * @author     Carsten Bleek <carsten@bleek.de>
+ */
 
 include_once "prepend.inc";
 include_once "menu.inc";
