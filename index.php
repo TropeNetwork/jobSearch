@@ -20,6 +20,7 @@ $form = new Form('jobSearch','GET');
 $defaultValues=array();
 $form->setDefaults($defaultValues);
 $form->addElement('text', 'fulltext', _("Fulltext"));
+$form->addElement('submit', 'search', _("search"));
 
 $content=&Page::addElement("text");
 $content->setSlot("content",$form->toHtml());

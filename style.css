@@ -8,9 +8,26 @@ body{
   font-size: 12px;
   background-color: #ccddbb;
   color: #555588;
-  scrollbar-base-color: #6666AA;
-  scrollbar-arrow-color: #ccccff;
 } 
+
+.t1 { 
+  color: silver;
+  text-align: center;
+  /* font: bold 10em Times, serif; */
+  font: bold 38px/38px Times, serif;
+  text-shadow: 0.2em 0.2em;
+  margin-top: 10px;
+}
+
+.t2 { 
+  color: rgb(0, 90, 156);
+  text-align: center;
+  margin-top: -26px;
+  /* font: italic 6em Times, serif; */
+  font: italic 21px/21px Times, serif;
+  text-shadow: 0.2em 0.2em;
+  margin-bottom: 10px;
+}
 
 .contentMain {
   border-top:dashed #ccccff 1px;
@@ -91,16 +108,13 @@ a.navigation:visited {
 
 a.navigationactive {
   color: #000000;
-  font-style: bold;
   text-decoration:none;
 }
 a.navigationactive:hover {
   color: #000000;
-  font-style: bold;
   text-decoration:underline;
 } 
 
 a.navigationactive:visited { 
   color: #000000;
-  font-style: bold;
 } 
