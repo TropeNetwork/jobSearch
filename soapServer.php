@@ -29,8 +29,8 @@ class SOAP_job{
      * remove job from index 
      */
     function deactivate($job_id){
-        $index=new SearchServer;
-        $index->delete($job_id);         
+#        $index=new SearchServer;
+#        $index->delete($job_id);         
     }
 }
 ?>

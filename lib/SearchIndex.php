@@ -12,7 +12,7 @@ class SearchIndex {
     function SearchIndex(){
         $this->collection = "jobs";
         $this->language   = "de_DE";
-        $this->db         = &DB::getConnection( DB_SEARCH );
+        $this->db         = &Database::getConnection( DB_SEARCH );
     }
 
     function insert($key,$data){
