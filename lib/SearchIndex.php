@@ -7,7 +7,7 @@
  * 
  * @package    OpenHR
  * @subpackage ProjectPage
- * @version    $Revision: 1.7 $
+ * @version    $Revision: 1.8 $
  * @author     Carsten Bleek <carsten@bleek.de>
  */
 
@@ -26,7 +26,7 @@ require_once(OPENHR_LIB."/Database.php");
 class SearchIndex {
 
     function SearchIndex(){
-        $this->collection = "jobs";
+        $this->collection = "job";
         $this->language   = "de_DE";
         $this->db         = &Database::getConnection( DB_SEARCH );
     }
@@ -34,7 +34,7 @@ class SearchIndex {
     function insert($key,$data){
 
         $query="REPLACE 
-                   INTO jobs 
+                   INTO job 
                         (job_id, job_title, job_location, employer, incoming_date)
                  VALUES (?,?,?,?,now())";     
         $sth=$this->db->prepare($query);
@@ -49,7 +49,7 @@ class SearchIndex {
     
     function delete($key){
 
-        $query="DELETE FROM jobs where job_id=?";
+        $query="DELETE FROM job where job_id=?";
         $sth=$this->db->prepare($query);
         $this->db->execute($sth,array($key));
 
