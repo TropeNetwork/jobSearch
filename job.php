@@ -2,7 +2,7 @@
 /**
  * @package    OpenHR
  * @subpackage jobSearch
- * @version    $Revision: 1.2 $
+ * @version    $Revision: 1.3 $
  * @author     Carsten Bleek <carsten@bleek.de>
  */
 
@@ -10,9 +10,10 @@ require_once("prepend.inc");
 
 $key=importVar("key");
 
-$page=&Page::singleton("job");
+$page=&Page::singleton("jobs/example.tpl");
+$page->setSlot("counter","<img size=\"1\" width=\"1\" alt=\"\" src=\"/jobAdmin/counter.php?document=job_$key\">");
 
 $smarty->assign("key",$key);
-$smarty->display("jobs/example.tpl");
+$page->toHtml();
 
 ?>
