@@ -2,13 +2,13 @@
 /**
  * @package    OpenHR
  * @subpackage jobSearch
- * @version    $Revision: 1.5 $
+ * @version    $Revision: 1.6 $
  * @author     Carsten Bleek <carsten@bleek.de>
  */
 
-include_once("prepend.inc");
+include_once('prepend.inc');
 require_once('SOAP/Server.php');
-require_once(OPENHR_LIB."/../../jobSearch/lib/SearchIndex.php");
+require_once(OPENHR_LIB.'/SearchIndex.php');
 
 $ss = new SOAP_Server();
 $sc = new SOAP_job();

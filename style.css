@@ -43,7 +43,7 @@ tr.header {
 
 td.menuLeft {
   font-family: Verdana, Arial, Helvetica, sans-serif;
-  font-size: 7pt;
+  font-size: 8pt;
   border-top:dashed #ccccff 1px;
   border-right:dashed #ccccff 1px;
 /*  position: absolute;*/
@@ -54,13 +54,13 @@ li p.title {
   font-style: bold;
 }
 
-.menuTop {
-  font-family: Verdana, Arial, Helvetica, sans-serif;
-  font-size: 7pt;
+#userinfo, #disclaimer, #lastupdate, #menuTop {
+  font-size: 8pt;
+  vertical-align:bottom;
 }
 
 .menuitem {
-  font-size: 7pt;
+  font-size: 8pt;
   background-color: #dfdfff
 }
 
@@ -69,14 +69,8 @@ li p.title {
 }
 
 .listPager {
-  font-size: 7pt;
+  font-size: 8pt;
   background-color: #dfdfff;
-}
-
-.demo {
-  font-size: 17pt;
-  background-color: yellow;
-  color: red;
 }
 
 a { 
