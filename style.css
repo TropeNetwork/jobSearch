@@ -1,0 +1,106 @@
+/* style.css */
+
+html {
+  margin: 0 }
+
+body{ 
+  font-family:Geneva,Arial,Helvetica,sans-serif;
+  font-size: 12px;
+  background-color: #ccddbb;
+  color: #555588;
+  scrollbar-base-color: #6666AA;
+  scrollbar-arrow-color: #ccccff;
+} 
+
+.contentMain {
+  border-top:dashed #ccccff 1px;
+  background-color: #eeeeff;
+  color: #000000;
+}
+
+tr.header {
+  border-top:dashed #ccccff 1px;
+  background-color: #ccccdd;
+  color: #000000;
+}
+
+td.menuLeft {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 7pt;
+  border-top:dashed #ccccff 1px;
+  border-right:dashed #ccccff 1px;
+/*  position: absolute;*/
+}
+
+li p.title {
+  font-size: 12pt;
+  font-style: bold;
+}
+
+.menuTop {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 7pt;
+}
+
+.menuitem {
+  font-size: 7pt;
+  background-color: #dfdfff
+}
+
+.list {
+  border: #ccccff 1px;
+}
+
+.listPager {
+  font-size: 7pt;
+  background-color: #dfdfff;
+}
+
+.demo {
+  font-size: 17pt;
+  background-color: yellow;
+  color: red;
+}
+
+a { 
+  color: #FF6600;
+  text-decoration:none;
+}
+ 
+a:hover {
+  color: #FF6600;
+  text-decoration:underline;
+} 
+ 
+a:visited { 
+  color: #FF6600;
+} 
+
+a.navigation {
+  color: #000000;
+  text-decoration:none;
+}
+a.navigation:hover {
+  color: #000000;
+  text-decoration:underline;
+} 
+
+a.navigation:visited { 
+  color: #000000;
+}
+
+a.navigationactive {
+  color: #000000;
+  font-style: bold;
+  text-decoration:none;
+}
+a.navigationactive:hover {
+  color: #000000;
+  font-style: bold;
+  text-decoration:underline;
+} 
+
+a.navigationactive:visited { 
+  color: #000000;
+  font-style: bold;
+} 

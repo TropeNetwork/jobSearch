@@ -1,0 +1,12 @@
+class SearchIndex {
+
+    function activate(){
+    }
+    
+    function deactivate(){
+    }
+
+    function delete(){
+    }
+
+}
